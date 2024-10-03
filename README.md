@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+# :moneybag: Tip & Consumption Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a Tip & Consumption Calculator that allows users to easily manage and calculate the total cost of an order, including tips. The app is built with React and TypeScript, using Vite for fast development and Tailwind CSS for styling. The project focuses on improving performance by optimizing component rendering.
 
-Currently, two official plugins are available:
+## :star2: Features
+- *Add Order:* Add individual orders with their corresponding prices.
+- *Delete Order:* Remove any order from the list.
+- *Calculate Tip:* Automatically calculate tips based on predefined percentages (10%, 20%, and 50%).
+- *Calculate Subtotal:* Get the total of all added orders before applying the tip.
+- *Calculate Total:* Calculate the final total, including both the tip and the subtotal.
+- *Save Order:* Save the current order to preserve it for future reference.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## :pushpin: Technologies Used
+- *React (with TypeScript)* for building the user interface.
+- *Vite* as the build tool for faster and more optimized development.
+- *Tailwind CSS* for modern, responsive styling.
 
-## Expanding the ESLint configuration
+## :ok_hand: Performance Optimization
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To enhance performance, I implemented:
 
-- Configure the top-level `parserOptions` property like this:
+- *Custom Hooks:* Encapsulated logic into reusable hooks to make the code more maintainable.
+- *Memoization (useMemo):* Reduced unnecessary re-renders by using useMemo for expensive calculations, improving app responsiveness.
+- *Efficient Component Rendering:* Optimized the rendering process of some components to reduce re-renders and improve the overall user experience.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## :globe_with_meridians: Site
+**Site:** https://tipcalculator-sac.netlify.app/
+
+## 🚀 Getting Started
+
+To run this project locally, follow these steps:
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/Tip-Calculator.git
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2. Navigate to the project folder
+```bash
+cd tip-calculator
+```
+### 3. Install dependencies
+```bash
+npm install
+```
+### 4. Start the application
+```bash
+npm run dev
+```
+### 5. Build the application
+```bash
+npm run build
 ```
